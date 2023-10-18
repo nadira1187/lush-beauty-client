@@ -2,7 +2,7 @@
 import { createContext, useEffect, useState } from "react";
 import { getAuth ,createUserWithEmailAndPassword, onAuthStateChanged, signOut, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import app from "../firebase/firebase.config";
-export const AuthContext =createContext("n");
+export const AuthContext =createContext(null);
 const auth = getAuth(app);
 
 const AuthProvider = ({children}) => {

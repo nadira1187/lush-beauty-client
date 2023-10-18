@@ -11,6 +11,7 @@ import Login from './components/login/Login';
 import Register from './components/register/Register';
 import AddProduct from './components/addProduct/AddProduct';
 import MyCart from './components/mycart/MyCart';
+import AuthProvider from './components/provider/AuthProvider';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -42,7 +43,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <AuthProvider>  
       <RouterProvider router={router} />
+    </AuthProvider>
+    
 
   </React.StrictMode>,
 )
