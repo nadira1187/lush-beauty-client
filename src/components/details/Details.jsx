@@ -1,16 +1,34 @@
 import { useLoaderData } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
-
+import swal from "sweetalert";
 const Details = () => {
     const product = useLoaderData();
-    console.log(product);
+const handleAddCart =() =>{
+    fetch(`http://localhost:5000/cart`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(product),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data);
+            swal("Success", "Your product added successfully", "success");
+        })
+        .catch((error) => {
+     
+          console.error('Error adding product to cart:', error);
+        });
+
+}
 
 
     return (
         <div>
             <Navbar></Navbar>
            
-                <div className="max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto py-10" key={product._id}> {/* Don't forget to add a "key" prop */}
+                <div className="max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto py-10" key={product._id}> 
                     <div className="w-full rounded-md bg-cover bg-center">
                         <img
                             src={product.image}
@@ -19,15 +37,15 @@ const Details = () => {
                         />
                     </div>
                     <div className="text-neutral-content">
-                        <h1 className="pt-10 text-3xl font-bold text-orange-600">
+                        <h1 className="pt-10 text-3xl font-bold text-rose-600">
                             {product.name}
                         </h1>
-                        <p className="pt-4 text-base font-normal text-orange-500">
+                        <p className="pt-4 text-base font-normal text-rose-600">
                             {product.description}
                         </p>
                         <div className="flex justify-between">
-                            <p>Price: {product.price}</p>
-                            <button className="my-6 btn normal-case btn-primary bg-orange-700 text-white border-none">
+                            <p className="text-xl text-rose-600 font-semibold">Price: {product.price}</p>
+                            <button className="my-6 btn normal-case btn-primary bg-rose-700 text-white border-none" onClick={handleAddCart}>
                                 Add to Cart
                             </button>
                         </div>
