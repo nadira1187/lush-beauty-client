@@ -12,10 +12,16 @@ import Register from './components/register/Register';
 import AddProduct from './components/addProduct/AddProduct';
 import MyCart from './components/mycart/MyCart';
 import AuthProvider from './components/provider/AuthProvider';
+import ProductList from './components/productList/ProductList';
+import ErrorPage from './components/error/ErrorPage';
+import PrivateRoute from './components/privateRoute/PrivateRoute';
+import Details from './components/details/Details';
+import UpdateProduct from './components/updateCart/UpdateProduct';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -23,11 +29,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/addproduct",
-        element: <AddProduct></AddProduct> ,
+        element:<PrivateRoute><AddProduct></AddProduct></PrivateRoute>  ,
       },
       {
         path: "/mycart",
-        element: <MyCart></MyCart> ,
+        element:<PrivateRoute> <MyCart></MyCart></PrivateRoute> ,
       },
       {
         path: "/login",
@@ -36,6 +42,21 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/productList/:brand",
+        element: <ProductList></ProductList>,
+        loader:({params}) => fetch(`http://localhost:5000/product/${params.brand}`),
+      },
+      {
+        path: "/details/:id",
+        element: <Details></Details>,
+        loader:({params}) => fetch(`http://localhost:5000/products/${params.id}`),
+      },
+      {
+        path: "/updateProducts/:id",
+        element: <UpdateProduct></UpdateProduct>,
+        loader:({params}) => fetch(`http://localhost:5000/products/${params.id}`),
       },
     ],
   },

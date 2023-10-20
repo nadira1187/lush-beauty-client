@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Card = () => {
 
@@ -50,7 +51,8 @@ const Card = () => {
           </figure>
           <div className="card-body items-center">
             <h2 className="card-title">{cart.name}</h2>
-            <button className="btn btn-primary text-white normal-case bg-rose-500 border-rose-500">See Products</button>
+            <Link to={`/productList/${cart.name}`}>
+            <button className="btn btn-primary text-white normal-case bg-rose-500 border-rose-500">See Products</button></Link>
             </div> 
             </div>
          

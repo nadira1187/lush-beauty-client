@@ -9,12 +9,12 @@ const AddProduct = () => {
         const form =event.target;
         const image =form.image.value;
         const name =form.name.value;
-        const bname =form.bname.value;
+        const brand =form.brand.value;
         const type =form.type.value;
         const price =form.price.value;
         const description =form.description.value;
         const rating =form.rating.value;
-        const productData= {image,name,bname,type,price,description,rating}
+        const productData= {image,name,brand,type,price,description,rating}
         console.log(productData);
         fetch('http://localhost:5000/product',{
             method: 'POST',
@@ -55,7 +55,7 @@ const AddProduct = () => {
              <label className="label">
                     <span className="label-text">Brand Name</span>
               </label>
-         <input type="text" name="bname" placeholder="" className="input input-bordered input-secondary w-full max-w-xs" />
+         <input type="text" name="brand" placeholder="" className="input input-bordered input-secondary w-full max-w-xs" />
         </div>
         <div className="form-control w-full max-w-xs">
              <label className="label">
