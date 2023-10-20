@@ -26,8 +26,9 @@ const Details = () => {
                             {product.description}
                         </p>
                         <div className="flex justify-between">
+                            <p>Price: {product.price}</p>
                             <button className="my-6 btn normal-case btn-primary bg-orange-700 text-white border-none">
-                                Price: {product.price}
+                                Add to Cart
                             </button>
                         </div>
                     </div>

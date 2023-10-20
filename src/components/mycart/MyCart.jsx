@@ -1,9 +1,10 @@
+import Navbar from "../Navbar/Navbar";
 
 
 const MyCart = () => {
     return (
         <div>
-            your cart
+            <Navbar></Navbar>
         </div>
     );
 };
