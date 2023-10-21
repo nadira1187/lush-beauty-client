@@ -16,7 +16,7 @@ const AddProduct = () => {
         const rating =form.rating.value;
         const productData= {image,name,brand,type,price,description,rating}
         console.log(productData);
-        fetch('http://localhost:5000/product',{
+        fetch('https://lush-beauty-server-m0luoj990-nadira1187.vercel.app/product',{
             method: 'POST',
             headers: {
                 'content-type' :'application/json'

@@ -9,7 +9,7 @@ const MyCart = () => {
 
   useEffect(() => {
 
-    fetch(`http://localhost:5000/cart`, {
+    fetch(`https://lush-beauty-server-m0luoj990-nadira1187.vercel.app/cart`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

@@ -46,17 +46,17 @@ const router = createBrowserRouter([
       {
         path: "/productList/:brand",
         element: <ProductList></ProductList>,
-        loader:({params}) => fetch(`http://localhost:5000/product/${params.brand}`),
+        loader:({params}) => fetch(`https://lush-beauty-server-m0luoj990-nadira1187.vercel.app/product/${params.brand}`),
       },
       {
         path: "/details/:id",
         element: <PrivateRoute><Details></Details></PrivateRoute> ,
-        loader:({params}) => fetch(`http://localhost:5000/products/${params.id}`),
+        loader:({params}) => fetch(`https://lush-beauty-server-m0luoj990-nadira1187.vercel.app/products/${params.id}`),
       },
       {
         path: "/updateProducts/:id",
         element:<PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute> ,
-        loader:({params}) => fetch(`http://localhost:5000/products/${params.id}`),
+        loader:({params}) => fetch(`https://lush-beauty-server-m0luoj990-nadira1187.vercel.app/products/${params.id}`),
       },
     ],
   },

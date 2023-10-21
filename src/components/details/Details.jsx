@@ -4,7 +4,7 @@ import swal from "sweetalert";
 const Details = () => {
     const product = useLoaderData();
 const handleAddCart =() =>{
-    fetch(`http://localhost:5000/cart`, {
+    fetch(`https://lush-beauty-server-m0luoj990-nadira1187.vercel.app/cart`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

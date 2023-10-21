@@ -21,7 +21,7 @@ const UpdateProduct = () => {
         const productData = { image, name, brand, type, price, description, rating };
         console.log(productData);
 
-        fetch(`http://localhost:5000/products/${_id}`, {
+        fetch(`https://lush-beauty-server-m0luoj990-nadira1187.vercel.app/products/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

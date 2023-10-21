@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBAVLKP51WUb5_FOwn3mKBpdREhcW4B7Ws",
-  authDomain: "lush-beauty-31445.firebaseapp.com",
-  projectId: "lush-beauty-31445",
-  storageBucket: "lush-beauty-31445.appspot.com",
-  messagingSenderId: "898315659418",
-  appId: "1:898315659418:web:b729e1e8e829db792f1723"
+  apiKey: "AIzaSyAmgq775eUhKedc1BTAImJUdGSOg6zrr_k",
+  authDomain: "lush-beauty-client.firebaseapp.com",
+  projectId: "lush-beauty-client",
+  storageBucket: "lush-beauty-client.appspot.com",
+  messagingSenderId: "649586357702",
+  appId: "1:649586357702:web:3597e27a336db34cb42ec7"
 };
 
 // Initialize Firebase
