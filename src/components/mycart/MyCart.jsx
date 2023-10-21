@@ -12,7 +12,7 @@ const MyCart = () => {
     <div>
         <Navbar></Navbar>
         <p className='text-2xl text-rose-500 text-center font-bold m-5'>Your Cart:</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 my-10 mx-auto">
+        <div className=" mb-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 my-10 mx-auto ">
                 {cartProducts.map(item => 
                     <CartItems
                     key={item._id} 

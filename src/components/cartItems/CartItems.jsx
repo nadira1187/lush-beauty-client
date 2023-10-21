@@ -17,7 +17,7 @@ const CartItems = ({ item, products, setCartProducts }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/delete/${_id}`, {
+                fetch(`https://lush-beauty-server-dpk93850r-nadira1187.vercel.app/delete/${_id}`, {
                     method: "DELETE",
                 })
                     .then(res => res.json())
@@ -47,7 +47,7 @@ const CartItems = ({ item, products, setCartProducts }) => {
     }
 
     return (
-        <div className="">
+        <div className="mt-4">
             <div className="flex justify-center">
                 <div className="card w-72 md:w-96 bg-rose-200 shadow-xl">
                     <img className="w-full h-72 rounded-t-xl" src={image} alt="" />
@@ -57,7 +57,7 @@ const CartItems = ({ item, products, setCartProducts }) => {
                         <h1 className=" text-lg font-bold">Type: {type}</h1>
                         <h1 className=" text-lg font-bold">Price: {price}</h1>
                     </div>
-                    <button onClick={() => handleDelete(_id)} className="btn btn-secondary px-4 lg:px-10 mt-4 rounded-t-none normal-case text-base">Delete</button>
+                    <button onClick={() => handleDelete(_id)} className="btn btn-secondary bg-rose-500 px-4 lg:px-10 mt-4 rounded-t-none normal-case text-base">Delete</button>
                 </div>
             </div>
         </div>
