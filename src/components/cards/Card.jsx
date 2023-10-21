@@ -42,7 +42,7 @@ const Card = () => {
             <input type="submit" value='Add Product' className=" mt-4  btn btn-primary bg-rose-500 border-rose-500 text-white normal-case "/>
         </div> */}
         </form> 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3"> 
+        <div className="ml-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3"> 
         {cards.map((cart) => (
         <div key={cart._id} className="card w-72 md:w-96 bg-base-100 shadow-xl">
           <figure className="px-10 pt-10">

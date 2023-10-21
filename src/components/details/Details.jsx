@@ -36,7 +36,7 @@ const handleAddCart =() =>{
                             className="rounded-md w-full h-full object-cover"
                         />
                     </div>
-                    <div className="text-neutral-content">
+                    <div className="ml-3 text-neutral-content">
                         <h1 className="pt-10 text-3xl font-bold text-rose-600">
                             {product.name}
                         </h1>

@@ -33,7 +33,7 @@ const ProductList = () => {
                     </div>
                 </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mb-4 mt-5">
+            <div className="ml-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mb-4 mt-5">
                 {products.length === 0 ? (
                     <p className="card shadow-xl m-3 text-5xl text-rose-600 font-bold p-6 text-center">No products available in this brand</p>
                 ) : (
