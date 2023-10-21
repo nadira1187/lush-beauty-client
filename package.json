@@ -18,7 +18,8 @@
     "react-icons": "^4.11.0",
     "react-router-dom": "^6.17.0",
     "sort-by": "^0.0.2",
-    "sweetalert": "^2.1.2"
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.6.13"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

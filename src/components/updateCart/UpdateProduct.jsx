@@ -5,7 +5,7 @@ import swal from 'sweetalert';
 
 const UpdateProduct = () => {
     const product = useLoaderData();
-    const { _id, name } = product;
+    const { _id, name ,image, brand ,type ,price,description,rating  } = product;
     console.log(product);
 
     const handleUpdate = (event) => {
@@ -47,13 +47,13 @@ const UpdateProduct = () => {
                         <label className="label">
                             <span className="label-text">Image of product</span>
                         </label>
-                        <input type="text" name="image" placeholder="" className="input input-bordered input-secondary w-full max-w-xs" />
+                        <input  type="text" name="image" placeholder="" defaultValue={image} className="input input-bordered input-secondary w-full max-w-xs" />
                     </div>
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
                             <span className="label-text">Name of product</span>
                         </label>
-                        <input type="text" name="name" placeholder="" className="input input-bordered input-secondary w-full max-w-xs" />
+                        <input type="text" name="name" placeholder=""  defaultValue={name} className="input input-bordered input-secondary w-full max-w-xs" />
                     </div>
                 </div>
                 <div className="flex flex-col lg:flex-row gap-4 justify-center items-center">
@@ -61,13 +61,21 @@ const UpdateProduct = () => {
                         <label className="label">
                             <span className="label-text">Brand Name</span>
                         </label>
-                        <input type="text" name="brand" placeholder="" className="input input-bordered input-secondary w-full max-w-xs" />
+                        <select name="brand" defaultValue={brand} className="select input-secondary input-bordered w-full max-w-xs">
+                            <option disabled selected>Select brand</option>
+                            <option>L'Oréal</option>
+                            <option>Estée Lauder</option>
+                            <option>Chanel</option>
+                            <option>Dior</option>
+                            <option>Urban Decay</option>
+                            <option>Procter & Gamble</option>
+                        </select>
                     </div>
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
                             <span className="label-text">Product Type</span>
                         </label>
-                        <input type="text" name="type" placeholder="" className="input input-bordered input-secondary w-full max-w-xs" />
+                        <input type="text" name="type" placeholder=""  defaultValue={type} className="input input-bordered input-secondary w-full max-w-xs" />
                     </div>
                 </div>
                 <div className="flex flex-col lg:flex-row gap-4 justify-center items-center">
@@ -75,13 +83,13 @@ const UpdateProduct = () => {
                         <label className="label">
                             <span className="label-text">Price</span>
                         </label>
-                        <input type="text" name="price" placeholder="" className="input input-bordered input-secondary w-full max-w-xs" />
+                        <input type="text" name="price" placeholder=""  defaultValue={price} className="input input-bordered input-secondary w-full max-w-xs" />
                     </div>
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
                             <span className="label-text">Short description</span>
                         </label>
-                        <input type="text" name="description" placeholder="" className="input input-bordered input-secondary w-full max-w-xs" />
+                        <input type="text" name="description" placeholder=""   defaultValue={description}className="input input-bordered input-secondary w-full max-w-xs" />
                     </div>
                 </div>
                 <div className="mb-6 flex flex-col lg:flex-row gap-4 justify-center items-center">
@@ -89,7 +97,7 @@ const UpdateProduct = () => {
                         <label className="label">
                             <span className="label-text">Rating</span>
                         </label>
-                        <input type="text" name="rating" placeholder="" className="input input-bordered input-secondary w-full max-w-xs" />
+                        <input type="text" name="rating" placeholder=""  defaultValue={rating} className="input input-bordered input-secondary w-full max-w-xs" />
                     </div>
                     <div className="form-control w-full max-w-xs">
                         <label className="label">

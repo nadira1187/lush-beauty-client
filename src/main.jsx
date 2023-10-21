@@ -34,6 +34,7 @@ const router = createBrowserRouter([
       {
         path: "/mycart",
         element:<PrivateRoute> <MyCart></MyCart></PrivateRoute> ,
+        loader:() =>fetch(`https://lush-beauty-server-m0luoj990-nadira1187.vercel.app/cart`)
       },
       {
         path: "/login",
