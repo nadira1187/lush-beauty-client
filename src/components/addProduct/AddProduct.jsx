@@ -41,13 +41,13 @@ const AddProduct = () => {
                         <label className="label">
                             <span className="label-text">Image of product</span>
                         </label>
-                        <input type="text" name="image" placeholder="" className="input input-bordered input-secondary w-full max-w-xs" />
+                        <input type="text" name="image" placeholder="" className="input input-bordered  w-full max-w-xs" />
                     </div>
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
                             <span className="label-text">Name of product</span>
                         </label>
-                        <input type="text" name="name" placeholder="" className="input input-bordered input-secondary w-full max-w-xs" />
+                        <input type="text" name="name" placeholder="" className="input input-bordered  w-full max-w-xs" />
                     </div>
                 </div>
                 <div className="flex flex-col lg:flex-row gap-4 justify-center items-center" >
@@ -55,7 +55,7 @@ const AddProduct = () => {
                         <label className="label">
                             <span className="label-text">Brand Name</span>
                         </label>
-                        <select name="brand" className="select input-secondary input-bordered w-full max-w-xs">
+                        <select name="brand" className="select  input-bordered w-full max-w-xs">
                             <option disabled selected>Select brand</option>
                             <option>L'Oréal</option>
                             <option>Estée Lauder</option>
@@ -64,13 +64,13 @@ const AddProduct = () => {
                             <option>Urban Decay</option>
                             <option>Procter & Gamble</option>
                         </select>
-                        {/* <input type="text" name="brand" placeholder="" className="input input-bordered input-secondary w-full max-w-xs" /> */}
+                        {/* <input type="text" name="brand" placeholder="" className="input input-bordered  w-full max-w-xs" /> */}
                     </div>
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
                             <span className="label-text">Product Type</span>
                         </label>
-                        <input type="text" name="type" placeholder="" className="input input-bordered input-secondary w-full max-w-xs" />
+                        <input type="text" name="type" placeholder="" className="input input-bordered  w-full max-w-xs" />
                     </div>
                 </div>
                 <div className="flex flex-col lg:flex-row gap-4 justify-center items-center" >
@@ -78,13 +78,13 @@ const AddProduct = () => {
                         <label className="label">
                             <span className="label-text">Price</span>
                         </label>
-                        <input type="text" name="price" placeholder="" className="input input-bordered input-secondary w-full max-w-xs" />
+                        <input type="text" name="price" placeholder="" className="input input-bordered  w-full max-w-xs" />
                     </div>
                     <div className="form-control w-full max-w-xs">
                         <label className="label">
                             <span className="label-text">Short description</span>
                         </label>
-                        <input type="text" name="description" placeholder="" className="input input-bordered input-secondary w-full max-w-xs" />
+                        <input type="text" name="description" placeholder="" className="input input-bordered  w-full max-w-xs" />
                     </div>
                 </div>
                 <div className=" mb-6 flex flex-col lg:flex-row gap-4 justify-center items-center" >
@@ -93,7 +93,7 @@ const AddProduct = () => {
                             <span className="label-text">Rating
                             </span>
                         </label>
-                        <input type="text" name="rating" placeholder="" className="input input-bordered input-secondary w-full max-w-xs" />
+                        <input type="text" name="rating" placeholder="" className="input input-bordered  w-full max-w-xs" />
                     </div>
                     <div className="form-control w-full max-w-xs ">
                         <label className="label">
