@@ -1,4 +1,5 @@
 # Client-side-live :https://lush-beauty-client.web.app
+# server-link: https://github.com/nadira1187/lush-beauty-server
 # Five key functionalities of my project
 ## User Authentication:
 Users can register and log in using their email and password by implementing error handling for password criteria during registration.
